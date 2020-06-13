@@ -5,8 +5,10 @@ PIPELINE=$(<$DIR/PIPELINE)
 TEMPLATE=$(<$DIR/TEMPLATE)
 CONSTRUCTOR=$(<$DIR/CONSTRUCTOR)
 STARTER=$(<$DIR/STARTER)
+# TODO add checks against overwrite
 echo "$PIPELINE">Jenkinsfile
 echo "$TEMPLATE">infra/main.tf
 echo "$CONSTRUCTOR">nonprod/main.tf
 echo "$CONSTRUCTOR">prod/main.tf
 echo "$STARTER">function/lambda_function.py
+touch function/requirements.txt
